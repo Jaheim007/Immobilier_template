@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -143,32 +144,32 @@
         <ul class="navbar-nav">
 
           <li class="nav-item">
-            <a class="nav-link " href="{% static 'EstateAgency/EstateAgency/index.html'%}">Home</a>
+            <a class="nav-link " href=" {% url 'home' %}">Home</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="{% static 'EstateAgency/EstateAgency/about.html'%}">About</a>
+            <a class="nav-link " href="{% url 'about' %}">About</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="{% static 'EstateAgency/EstateAgency/property-grid.html'%}">Property</a>
+            <a class="nav-link " href=" {% url 'property' %}">Property</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link " href="{% static 'EstateAgency/EstateAgency/blog-grid.html'%}">Blog</a>
+            <a class="nav-link " href=" {% url 'blog' %}">Blog</a>
           </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item " href="{% static 'EstateAgency/EstateAgency/property-single.html'%}">Property Single</a>
-              <a class="dropdown-item " href="{% static 'EstateAgency/EstateAgency/blog-single.html'%}">Blog Single</a>
-              <a class="dropdown-item " href="{% static 'EstateAgency/EstateAgency/agents-grid.html'%}">Agents Grid</a>
-              <a class="dropdown-item active" href="{% static 'EstateAgency/EstateAgency/agent-single.html'%}">Agent Single</a>
+              <a class="dropdown-item " href=" {% url 'propertySingle' %}">Property Single</a>
+              <a class="dropdown-item " href="{% url 'blogSingle' %}">Blog Single</a>
+              <a class="dropdown-item " href="{% url 'agentGrid' %}">Agents Grid</a>
+              <a class="dropdown-item active" href=" {% url 'agentSingle' %}">Agent Single</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="{% static 'EstateAgency/EstateAgency/contact.html'%}">Contact</a>
+            <a class="nav-link " href="{% url 'contact' %}">Contact</a>
           </li>
         </ul>
       </div>
